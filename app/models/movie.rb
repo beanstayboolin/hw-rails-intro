@@ -10,7 +10,7 @@ class Movie < ApplicationRecord
       all
     end
   end
-end
+
 
 def self.sorted_by(sort_by)
     case sort_by
@@ -22,3 +22,4 @@ def self.sorted_by(sort_by)
       all
     end
   end
+end
