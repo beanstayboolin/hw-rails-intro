@@ -10,9 +10,11 @@ class MoviesController < ApplicationController
   else
     @ratings_to_show = @all_ratings
   end
+  @sort_by = params[:sort_by]
 
-  @movies = Movie.with_ratings(@ratings_to_show)
-  end
+  @movies = Movie.with_ratings(@ratings_to_show).sorted_by(@sort_by)
+end
+
 
   # GET /movies/1 or /movies/1.json
   def show

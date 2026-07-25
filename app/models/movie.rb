@@ -11,3 +11,15 @@ class Movie < ApplicationRecord
     end
   end
 end
+
+def self.sorted_by(sort_by)
+    case sort_by
+    when "title"
+      order(:title)
+    when "release_date"
+      order(:release_date)
+    else
+      all
+    end
+  end
+end
