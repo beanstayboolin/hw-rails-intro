@@ -22,4 +22,3 @@ def self.sorted_by(sort_by)
       all
     end
   end
-end
